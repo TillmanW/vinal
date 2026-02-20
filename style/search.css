@@ -6,3 +6,15 @@ body {
     height: 100vh;
     justify-content: center;
 }
+.input {
+    background: white;
+    border: 0;
+    font-size: 18px;
+    padding: 5px;
+    height: 50px;
+    width: 200px;
+}
+
+.input:focus {
+    outline: none;
+}

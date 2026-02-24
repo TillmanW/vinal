@@ -1,0 +1,26 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    Justify-content: center;
+    margin: 0;
+}
+
+.loading-text {
+    font-size: 50px;
+    opacity: 1;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/starrynight.avif');
+    position: absolute;
+    background-repeat: no repeat;
+    background-size: cover;
+}

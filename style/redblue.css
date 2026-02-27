@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    Background: Red;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    Justify-content: center;
+    margin: 0;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: Red
+}
+.box {
+    background: blue;
+    border: 0;
+    cursor: pointer;
+    height: 50px;
+    width: 45px;
+    position: center;
+}
+.redblue.active .input {
+    width: 200px;
+}
+.redblue.active .btn {
+    transform: translateX(500);
+}
+

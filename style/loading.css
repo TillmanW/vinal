@@ -12,6 +12,7 @@ body {
 }
 
 .loading-text {
+    color: white;
     font-size: 50px;
     opacity: 1;
 }
@@ -19,8 +20,9 @@ body {
 .bg {
     width: 100vw;
     height: 100vh;
-    background-image: url('../images/starrynight.avif');
+    background-image: url('/images/starrynight.avif');
     position: absolute;
     background-repeat: no repeat;
     background-size: cover;
+    z-index: -1
 }

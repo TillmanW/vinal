@@ -14,20 +14,20 @@ body {
 .bg {
     width: 100vw;
     height: 100vh;
-    background: Red
+    background: blue
 }
 .box {
-    background: blue;
+    background: red;
     border: 0;
     cursor: pointer;
-    height: 50px;
-    width: 45px;
+    height: 70px;
+    width: 55px;
     position: center;
 }
 .redblue.active .input {
-    width: 200px;
+    width: 400px;
 }
 .redblue.active .btn {
-    transform: translateX(500);
+    transform: translateX(800);
 }
 

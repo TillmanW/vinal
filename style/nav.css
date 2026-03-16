@@ -25,6 +25,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    transition
 }
 
 .nav .container {
@@ -117,11 +118,11 @@ body {
 }
 
 .nav.active {
-    background-color: #ffffff;
+    background-color: white;
 }
 
 .nav.active a {
-    color: #000000;
+    color: white;
 }
 
 .nav.active .container {

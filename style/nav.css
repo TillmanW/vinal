@@ -30,4 +30,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: #ffffff;
+    
 }

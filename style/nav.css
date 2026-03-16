@@ -55,4 +55,7 @@ body {
     color: #c0392b;
 }
 */
-.hero
+.hero {
+    background-image: url('../images/cs.avif');
+    height: 100vh;
+}

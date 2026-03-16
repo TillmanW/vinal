@@ -58,4 +58,14 @@ body {
 .hero {
     background-image: url('../images/cs.avif');
     height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: -2;
 }

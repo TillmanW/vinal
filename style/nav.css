@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #222222;
+    background: #ffffff;
     overflow-x: hidden;
     padding-bottom: 50px;
 }
@@ -41,5 +41,16 @@ body {
 
 .nav a {
     color: #ffffff;
-    
+    text-decoration: none;
+    padding: 7px 15px;
+}
+
+.nav a:hover {
+    font-weight: bold;
+    color: #c0392b;
+}
+
+.nav a:current {
+    font-weight: bold;
+    color: #c0392b;
 }

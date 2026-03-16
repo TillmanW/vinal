@@ -16,10 +16,12 @@ body {
 
 .container {
     max-width: 1200px;
-    background: #fafafa;
-    width: 100vw;
-    min-height: 100vh;
-    padding: 50px
 }
 
+.nav {
+    position: fixed;
+    background: #222222;
+    top: 0;
+    left: 0;
+}
 

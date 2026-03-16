@@ -38,6 +38,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    list-style-type: none;
 }
 
 .nav a {
@@ -108,4 +109,21 @@ body {
 .content p {
     color: #555555;
     line-height: 30px
+}
+
+.nav a.current {
+    font-weight: bold;
+    color: #c0923b;
+}
+
+.nav.active {
+    background-color: #ffffff;
+}
+
+.nav.active a {
+    color: #000000;
+}
+
+.nav.active .container {
+    padding: 10px
 }

@@ -114,7 +114,7 @@ body {
 
 .nav a.current {
     font-weight: bold;
-    color: #c0923b;
+    color: red;
 }
 
 .nav.active {

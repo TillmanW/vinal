@@ -21,6 +21,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: margin 0.5s ease-out;
 }
 
 h1 {
@@ -99,10 +100,12 @@ h1 {
     padding: 20px;
     z-index: 100;
     text-align: center;
+    transform: scale(0);
 }
 
 .message.visible {
     opacity: 1;
+    transform: scale(1);
 }
 
 .insect {
@@ -112,7 +115,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .insect img {

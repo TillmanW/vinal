@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome! Click a page below:</p>
+    </header>
+
+    <div class="container">
+        <a href="loading.html">Loading Page</a>
+        <a href="search.html">Search Page</a>
+        <a href="redblue.html">Test Page</a>
+        <a href="expanding.html">Expanding Page</a>
+        <a href="event.html">Event Page</a>
+        <a href="color.html">Color Changer</a>
+        <a href="sound.html">Sound Page</a>
+        <a href="nav.html">Nav Page</a>
+        <a href="insect.html">Insect Page</a>
+    </div>
+
+    <button>Toggle Dark Mode</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

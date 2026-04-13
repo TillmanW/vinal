@@ -10,6 +10,7 @@ setInterval(moveBall, 10)
 function moveBall(){
     ballxPosition = ballxPosition + ballSpeed
     ball.style.left = `${ballxPosition}px`
+    if (ballxPosition)
 }
 
 createBall()

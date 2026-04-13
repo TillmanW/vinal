@@ -52,10 +52,11 @@ function createLPaddle(){
     LPaddle.style.backgroundColor = `blue`
     LPaddle.style.position = `absolute`
     LPaddle.style.left = "50px"
+    LPaddle.style.top = `${LPaddleYPosition}px`
     LPaddle.style.height = `${windowHeight / 2 - LPaddleHeight / 2}px`
 }
 
-document.addEventListener(`keyup`, (event) => {
+document.addEventListener(`keydown`, (event) => {
     if (event.key == 'w') {
         if (LPaddleYPosition <= 0) {
             LPaddleYPosition = 0
@@ -65,7 +66,12 @@ document.addEventListener(`keyup`, (event) => {
         }
     }
     if (event.key == 's') {
+        if (LPaddleYPosition >= windowHeight - LPaddleHeight){
+            LPaddleYPosition = windowHeight - LPaddkeHeight
+        }
+        else {
         LPaddleYPosition = LPaddleYPosition + LPaddleSpeed
+        }
     }
     LPaddle.style.top = `${LPaddleYPosition}px`
 })

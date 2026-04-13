@@ -56,7 +56,9 @@ function createLPaddle(){
 
 document.addEventListener(`keyup`, (event) => {
     if (event.key == 'w') {
-        //move up
+        LPaddleYPosition = LPaddleYPosition - LPaddleYSpeed
     }
-    if (event.key == 's')
+    if (event.key == 's') {
+        //move down
+    }
 })

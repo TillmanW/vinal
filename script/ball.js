@@ -2,11 +2,16 @@ const ball = document.createElement('div')
 const ballRadius = 30
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
+let ballxPosition = windowWidth/2 - ball radius
+let ballSpeed = 5
 
+setInterval(moveBall, 10)
 
 function moveBall(){
-    ball.style.left = ?
+    ballxPosition = ballxPosition + ballSpeed
+    ball.style.left = `${ballxPosition}px`
 }
+
 createBall()
 function createBall(){
     document.body.appendChild(ball)

@@ -1,14 +1,15 @@
+const windowHeight = window.innerHeight
+const windowWidth = window.innerWidth
 const ball = document.createElement('div')
 document.body.appendChild(ball)
 const LPaddle = document.createElement('div')
 document.body.appendChild(LPaddle)
 let LPaddleWidth = 20
 let LPaddleHeight = 200
-
+let LPaddleSpeed = 40
+let LPaddleYPosition = windowHeight / 2 - LPaddleHeight / 2
 
 const ballRadius = 30
-const windowHeight = window.innerHeight
-const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
@@ -44,7 +45,7 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
-createLPaddle
+createLPaddle()
 function createLPaddle(){
     LPaddle.style.height = `${LPaddleHeight}px`
     LPaddle.style.width =  `${LPaddleWidth}px`
@@ -56,9 +57,15 @@ function createLPaddle(){
 
 document.addEventListener(`keyup`, (event) => {
     if (event.key == 'w') {
-        LPaddleYPosition = LPaddleYPosition - LPaddleYSpeed
+        if (LPaddleYPosition <= 0) {
+            LPaddleYPosition = 0
+        }
+        else {
+        LPaddleYPosition = LPaddleYPosition - LPaddleSpeed
+        }
     }
     if (event.key == 's') {
-        //move down
+        LPaddleYPosition = LPaddleYPosition + LPaddleSpeed
     }
+    LPaddle.style.top = `${LPaddleYPosition}px`
 })

@@ -1,5 +1,5 @@
 const ball = document.createElement('div')
-document.body.appendChild(LPaddle)
+document.body.appendChild(ball)
 const LPaddle = document.createElement('div')
 document.body.appendChild(LPaddle)
 let LPaddleWidth = 20
@@ -43,4 +43,11 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
-createPaddle
+function createLPaddle(){
+    LPaddle.style.height = `${LPaddleHeight}px`
+    LPaddle.style.width =  `${LPaddleWidth}px`
+    LPaddle.style.backgroundColor = `blue`
+    LPaddle.style.position = `absolute`
+    LPaddle.style.left = "50px"
+    LPaddle.style.height = ``
+}

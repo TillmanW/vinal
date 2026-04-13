@@ -3,7 +3,8 @@ document.body.appendChild(ball)
 const LPaddle = document.createElement('div')
 document.body.appendChild(LPaddle)
 let LPaddleWidth = 20
-let LPaddleHeight = 100
+let LPaddleHeight = 200
+
 
 const ballRadius = 30
 const windowHeight = window.innerHeight
@@ -43,11 +44,19 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
+createLPaddle
 function createLPaddle(){
     LPaddle.style.height = `${LPaddleHeight}px`
     LPaddle.style.width =  `${LPaddleWidth}px`
     LPaddle.style.backgroundColor = `blue`
     LPaddle.style.position = `absolute`
     LPaddle.style.left = "50px"
-    LPaddle.style.height = ``
+    LPaddle.style.height = `${windowHeight / 2 - LPaddleHeight / 2}px`
 }
+
+document.addEventListener(`keyup`, (event) => {
+    if (event.key == 'w') {
+        //move up
+    }
+    if (event.key == 's')
+})

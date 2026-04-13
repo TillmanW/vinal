@@ -31,6 +31,14 @@ function moveBall(){
         ballXDirection = ballXDirection * -1
         ball.style.backgroundColor = "blue"
     }
+
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let LPaddleTop = LPaddleYPosition
+    let LPaddleBottom = LPaddleYPosition + LPaddleHeight
+    let LPaddleRight = LPaddleXPosition + LPaddleWidth
+    
 }
 
 createBall()

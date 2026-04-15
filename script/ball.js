@@ -9,7 +9,7 @@ let LPaddleWidth = 20
 let LPaddleHeight = 200
 let LPaddleSpeed = 40
 let LPaddleYPosition = windowHeight / 2 - LPaddleHeight / 2
-let LPaddleXPosition = windowWidth / 2 - LPaddleWidth /2
+let LPaddleXPosition = 50
 
 const ballRadius = 30
 let ballXPosition = windowWidth/2 - ballRadius
@@ -37,6 +37,8 @@ function moveBall(){
     let ballTop = ballYPosition
     let ballBottom = ballYPosition + 2 * ballRadius
     let ballLeft = ballXPosition
+    let ballRight = ballXPosition + 2 * ballRadius
+
     let LPaddleTop = LPaddleYPosition
     let LPaddleBottom = LPaddleYPosition + LPaddleHeight
     let LPaddleRight = LPaddleXPosition + LPaddleWidth
@@ -44,7 +46,7 @@ function moveBall(){
     if(
         (ballBottom >= LPaddleTop) &&
         (ballTop <= LPaddleBottom) &&
-        (ballLeft <= LPaddleRight) &&
+        (ballRight >= LPaddleXPosition) &&
         (ballXDirection == -1)
     ) {
         ballXDirection = ballXDirection * -1
@@ -68,7 +70,7 @@ function createLPaddle(){
     LPaddle.style.width =  `${LPaddleWidth}px`
     LPaddle.style.backgroundColor = `blue`
     LPaddle.style.position = `absolute`
-    LPaddle.style.left = "50px"
+    LPaddle.style.left = `${LPaddleXPosition}px`
     LPaddle.style.top = `${LPaddleYPosition}px`
 }
 

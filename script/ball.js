@@ -17,7 +17,7 @@ let ballSpeed = 5
 let ballXDirection = 1
 let ballYDirection = 1
 
-// setInterval(moveBall, 10)
+setInterval(moveBall, 10)
 
 function moveBall(){
     ballXPosition = ballXPosition + ballSpeed * ballXDirection
@@ -88,7 +88,23 @@ document.addEventListener(`keydown`, (event) => {
 
     }
 })
-
+document.addEventListener('keyup', (event) => {
+    if(event.key == 'w') {
+        wKey = false
+    }
+    if(event.key == 's') {
+        sKey = false
+    }
+})
+function moveLpaddle() {
+    if(wkey == true && LpaddleYPosition > 0) {
+        LPaddleYPosition = LPaddleYPosition - LPaddleSpeed
+    }
+    if(sKey == true && LPaddleYPosition < windowHeight - LPaddleHeight) {
+        LPaddleYPosition = LPaddleYPosition + LPaddleSpeed
+    }
+    LPaddle.style.top = `${LPaddleYPosition}px`
+}
 function animate() {
     moveBall()
     moveLPaddle()

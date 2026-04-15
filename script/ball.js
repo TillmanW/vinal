@@ -8,6 +8,7 @@ let LPaddleWidth = 20
 let LPaddleHeight = 200
 let LPaddleSpeed = 40
 let LPaddleYPosition = windowHeight / 2 - LPaddleHeight / 2
+let LPaddleXPosition = windowWidth / 2 - LPaddleWidth /2
 
 const ballRadius = 30
 let ballXPosition = windowWidth/2 - ballRadius
@@ -38,7 +39,16 @@ function moveBall(){
     let LPaddleTop = LPaddleYPosition
     let LPaddleBottom = LPaddleYPosition + LPaddleHeight
     let LPaddleRight = LPaddleXPosition + LPaddleWidth
-    
+
+
+    if(
+        (ballBottom >= LPaddleTop) &&
+        (ballTop <= LPaddleBottom) &&
+        (ballLeft <= LPaddleRight) &&
+        (ballXDirection == -1)
+    ) {
+        ballXDirection = ballXDirection * -1
+    }
 }
 
 createBall()
@@ -83,3 +93,10 @@ document.addEventListener(`keydown`, (event) => {
     }
     LPaddle.style.top = `${LPaddleYPosition}px`
 })
+
+function animate() {
+    moveBall()
+    moveLPaddle()
+    requestAnimationFrame(animate)
+}
+animate()

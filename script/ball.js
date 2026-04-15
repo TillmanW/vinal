@@ -79,12 +79,6 @@ function moveBall(){
         updateScore()
     }
 
-    if(ballXPosition < 0){
-        RScore++
-        resetBall()
-        updateScore()
-    }
-
     if(
         (ballBottom >= RPaddleTop) &&
         (ballTop <= RPaddleBottom) &&
@@ -96,22 +90,8 @@ function moveBall(){
         RScore++
         updateScore()
     }
-
-    if(ballXPosition > windowWidth){
-        LScore++
-        resetBall()
-        updateScore()
-    }
 }
 
-function resetBall(){
-    ballXPosition = windowWidth/2 - ballRadius
-    ballYPosition = windowHeight/2 - ballRadius
-    ballXDirection = Math.random() > 0.5 ? 1 : -1
-    ballYDirection = Math.random() > 0.5 ? 1 : -1
-}
-
-createBall()
 function createBall(){
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
@@ -122,20 +102,18 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
-createLPaddle()
 function createLPaddle(){
     LPaddle.style.height = `${LPaddleHeight}px`
-    LPaddle.style.width =  `${LPaddleWidth}px`
+    LPaddle.style.width = `${LPaddleWidth}px`
     LPaddle.style.backgroundColor = `blue`
     LPaddle.style.position = `absolute`
     LPaddle.style.left = `${LPaddleXPosition}px`
     LPaddle.style.top = `${LPaddleYPosition}px`
 }
 
-createRPaddle()
 function createRPaddle(){
     RPaddle.style.height = `${RPaddleHeight}px`
-    RPaddle.style.width =  `${RPaddleWidth}px`
+    RPaddle.style.width = `${RPaddleWidth}px`
     RPaddle.style.backgroundColor = `red`
     RPaddle.style.position = `absolute`
     RPaddle.style.left = `${RPaddleXPosition}px`
@@ -188,6 +166,9 @@ function animate(){
     requestAnimationFrame(animate)
 }
 
+createBall()
+createLPaddle()
+createRPaddle()
 updateScore()
 animate()
 /* const windowHeight = window.innerHeight

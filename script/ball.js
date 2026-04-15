@@ -97,7 +97,7 @@ document.addEventListener('keyup', (event) => {
     }
 })
 function moveLpaddle() {
-    if(wkey == true && LpaddleYPosition > 0) {
+    if(wKey == true && LpaddleYPosition > 0) {
         LPaddleYPosition = LPaddleYPosition - LPaddleSpeed
     }
     if(sKey == true && LPaddleYPosition < windowHeight - LPaddleHeight) {

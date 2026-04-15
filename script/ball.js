@@ -105,6 +105,7 @@ function moveLpaddle() {
     }
     LPaddle.style.top = `${LPaddleYPosition}px`
 }
+moveLpaddle()
 function animate() {
     moveBall()
     moveLPaddle()

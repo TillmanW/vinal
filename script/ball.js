@@ -1,15 +1,11 @@
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
-
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-
 const LPaddle = document.createElement('div')
 document.body.appendChild(LPaddle)
-
 const RPaddle = document.createElement('div')
 document.body.appendChild(RPaddle)
-
 const scoreDisplay = document.createElement('div')
 document.body.appendChild(scoreDisplay)
 
